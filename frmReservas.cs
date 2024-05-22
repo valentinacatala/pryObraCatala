@@ -15,6 +15,14 @@ namespace pryObraCatala
         public frmReservas()
         {
             InitializeComponent();
+
+            cbLocal.SelectedIndexChanged += cbLocal_SelectedIndexChanged;
+
+            cbLocal.Items.Add("Quenaken");
+            cbLocal.Items.Add("Onas");
+            cbLocal.Items.Add("Tobas");
+
+            // Suscribir el evento SelectionChanged del ComboBox
             cbLocal.SelectedIndexChanged += cbLocal_SelectedIndexChanged;
         }
 
@@ -63,9 +71,63 @@ namespace pryObraCatala
             tblAsientosAzul.ColumnCount = 0;
             tblAsientosVerde.ColumnCount = 0;
 
-            int LocalSeleccionado = Convert.ToInt32(cbLocal.SelectedItem);
+            int opcionSeleccionada = cbLocal.SelectedIndex;
 
-            
+            switch (opcionSeleccionada)
+            {
+                case 0:
+                    tblAsientosAzul.RowCount = 20;
+                    tblAsientosAzul.RowCount = 20;
+                    tblAsientosAzul.ColumnCount = 5;
+                    tblAsientosVerde.ColumnCount=5;
+
+                    tblAsientosAzul.RowStyles.Add(new RowStyle(SizeType.Percent, 20));
+                    tblAsientosAzul.RowStyles.Add(new RowStyle(SizeType.Percent, 20));
+                    tblAsientosAzul.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50));
+                    tblAsientosAzul.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50));
+
+                    tblAsientosVerde.RowStyles.Add(new RowStyle(SizeType.Percent, 50));
+                    tblAsientosVerde.RowStyles.Add(new RowStyle(SizeType.Percent, 50));
+                    tblAsientosVerde.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50));
+                    tblAsientosVerde.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50));
+                    break;
+
+                case 1:
+                    tblAsientosAzul.RowCount = 40;
+                    tblAsientosAzul.RowCount = 20;
+                    tblAsientosAzul.ColumnCount = 5;
+                    tblAsientosVerde.ColumnCount = 5;
+
+                    tblAsientosAzul.RowStyles.Add(new RowStyle(SizeType.Percent, 50));
+                    tblAsientosAzul.RowStyles.Add(new RowStyle(SizeType.Percent, 50));
+                    tblAsientosAzul.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50));
+                    tblAsientosAzul.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50));
+
+                    tblAsientosVerde.RowStyles.Add(new RowStyle(SizeType.Percent, 50));
+                    tblAsientosVerde.RowStyles.Add(new RowStyle(SizeType.Percent, 50));
+                    tblAsientosVerde.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50));
+                    tblAsientosVerde.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50));
+                    break;
+
+                case 2:
+                    tblAsientosAzul.RowCount = 20;
+                    tblAsientosAzul.RowCount = 20;
+                    tblAsientosAzul.ColumnCount = 5;
+                    tblAsientosVerde.ColumnCount = 5;
+
+                    tblAsientosAzul.RowStyles.Add(new RowStyle(SizeType.Percent, 50));
+                    tblAsientosAzul.RowStyles.Add(new RowStyle(SizeType.Percent, 50));
+                    tblAsientosAzul.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50));
+                    tblAsientosAzul.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50));
+
+                    tblAsientosVerde.RowStyles.Add(new RowStyle(SizeType.Percent, 50));
+                    tblAsientosVerde.RowStyles.Add(new RowStyle(SizeType.Percent, 50));
+                    tblAsientosVerde.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50));
+                    tblAsientosVerde.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50));
+                    break;
+            }
+
+
         }
     }
 }

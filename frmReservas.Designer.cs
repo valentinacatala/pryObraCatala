@@ -56,10 +56,6 @@
             // 
             this.cbLocal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLocal.FormattingEnabled = true;
-            this.cbLocal.Items.AddRange(new object[] {
-            "Quenaken",
-            "Onas",
-            "Tobas"});
             this.cbLocal.Location = new System.Drawing.Point(115, 17);
             this.cbLocal.Name = "cbLocal";
             this.cbLocal.Size = new System.Drawing.Size(196, 21);
@@ -154,7 +150,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(598, 470);
+            this.ClientSize = new System.Drawing.Size(616, 479);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnReservar);
